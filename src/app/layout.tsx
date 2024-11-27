@@ -2,8 +2,8 @@
 
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css"
-import { useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 
 // import type { Metadata } from "next";
@@ -17,9 +17,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  useEffect(() => {
-    require("bootstrap/dist/js/bootstrap.bundle.min.js");
-  }, [])
+
   return (
     <html lang="en">
       <head>
