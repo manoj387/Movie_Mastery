@@ -1,6 +1,7 @@
 import React from 'react'
 import Backup from '/public/images/backup.png';
 import { NavLink } from 'react-router-dom';
+import Image from 'next/image';
 
 const card = (movie: any) => {
     const {id, title, poster_path, overview , vote_average, vote_count} = movie.movie;
@@ -9,7 +10,7 @@ const card = (movie: any) => {
         <>
             <div className='container'>
                 <div className="card my-1 m-auto" style={{ width: '18rem'}}>
-                    <img src={images as any} className="img-fluid h-25" alt="movieImage" />
+                    <Image src={images as any} className="img-fluid h-25" alt="movieImage" />
                     <div className="card-body">
                         <h5 className="card-title title">{title}</h5>
                         <p className="card-text text">{overview}</p>

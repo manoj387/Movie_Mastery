@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 import Backup from '/public/images/backup.png';
 import { ConvertMinutes, splitBudget } from '../Utils/utils';
+import Image from "next/image";
 
 export const MovieDetails = () => {
     const params = useParams();
@@ -31,19 +32,19 @@ export const MovieDetails = () => {
 
             <h3 className='text-center rounded p-1 w-50 shadow-sm'
                 style={{ backgroundColor: '#D4BEE4', color: '#3B1E54' }}>
-                {movies.original_title}
+                {movies.title}
             </h3>
 
             <div className="card mb-3 mt-5 mx-auto" style={{ width: "540px" }}>
                 <div className="row g-0">
                     <div className="col-md-4">
-                        <img src={images as any} className="img-fluid rounded-start  h-100" alt="BackdropImages" />
+                        <Image src={images as any} className="img-fluid rounded-start h-100" alt="BackdropImages" />
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">
                             <h5 className="card-title text-center p-1 rounded shadow-sm"
                                 style={{ background: '#9B7EBD', color: '#EEEEEE' }}>
-                                {movies.original_title}
+                                {movies.title}
                             </h5>
                             {movies.genres ? <p>
                                 {movies.genres.map((genre: any) => (

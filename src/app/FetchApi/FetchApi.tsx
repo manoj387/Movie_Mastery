@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
-const fetchapi = ( apiPath : any) => {
+const Fetchapi = ( apiPath : any) => {
     const [data, setData] = useState<any>([]);
     const key = process.env.customKey;
     const url = `https://api.themoviedb.org/3/${apiPath}?api_key=${key}`;
@@ -14,4 +14,4 @@ const fetchapi = ( apiPath : any) => {
     return { data };
 }
 
-export default fetchapi
+export default Fetchapi

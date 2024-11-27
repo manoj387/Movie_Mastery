@@ -1,10 +1,10 @@
 "use client";
 import React, { useEffect } from 'react'
 import Card from '../Component/card';
-import fetchapi from '../hooks/fetchapi';
+import FetchApi from '../FetchApi/FetchApi';
 
 export const MovieList = ({ title, apiPath }: any) => {
-    const { data: movies } = fetchapi(apiPath);
+    const { data: movies } = FetchApi(apiPath);
     useEffect(() => {
         if (movies.title && typeof document !== undefined) {
             document.title = title;
